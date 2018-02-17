@@ -13,4 +13,4 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Crypto/>
   </Provider>
-  , document.querySelector('.container'));
+  , document.querySelector('.root'));
