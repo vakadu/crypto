@@ -266,3 +266,8 @@ input::-moz-focus-inner {
 .market-head{
     padding: 50px 0;
 }
+
+.market-color-hover:hover{
+    color: #212121;
+    cursor: pointer;
+}

@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactTimeout from 'react-timeout'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Grid, Row, Col, Table, ButtonToolbar, Button } from 'react-bootstrap';
 
 import { fetchCoins } from "../actions";
@@ -16,7 +17,9 @@ class Crypto extends Component{
             return (
                 <tr key={ coin.id }>
                     <td>{ coin.rank }</td>
-                    <td>{ coin.name }</td>
+                    <td className="market-color-hover">
+                        <Link to={`/currency/${coin.id}`}>{ coin.name }</Link>
+                    </td>
                     <td>{ coin.symbol }</td>
                     <td>{ coin.market_cap_usd }</td>
                     <td>{ coin.price_usd }</td>
