@@ -40,10 +40,10 @@ class CryptoShow extends Component{
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>{ coin.market_cap_usd }</td>
-                                    <td>{ coin['24h_volume_usd'] }</td>
-                                    <td>{ coin.available_supply }</td>
-                                    <td>{ coin.max_supply }</td>
+                                    <td>${ coin.market_cap_usd }USD</td>
+                                    <td>${ coin['24h_volume_usd'] }USD</td>
+                                    <td> { coin.available_supply }BTC</td>
+                                    <td> { coin.max_supply }BTC</td>
                                 </tr>
                                 </tbody>
                             </Table>

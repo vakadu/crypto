@@ -11,14 +11,18 @@ class Crypto extends Component{
     constructor(props){
         super(props);
 
-        setInterval(() => {
+        this.setRefresh = setInterval(() => {
             this.props.fetchCoins();
-            //console.log("hello");
-        }, 300000);
+            console.log("hello");
+        }, 300000);//10000
     }
 
     componentDidMount(){
         this.props.fetchCoins();
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.setRefresh);
     }
 
     renderBody(){
