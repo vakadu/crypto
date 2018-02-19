@@ -8,6 +8,15 @@ import { Grid, Row, Col, Table, ButtonToolbar, Button } from 'react-bootstrap';
 import { fetchCoins } from "../actions";
 
 class Crypto extends Component{
+    constructor(props){
+        super(props);
+
+        setInterval(() => {
+            this.props.fetchCoins();
+            //console.log("hello");
+        }, 300000);
+    }
+
     componentDidMount(){
         this.props.fetchCoins();
     }
@@ -21,13 +30,13 @@ class Crypto extends Component{
                         <Link to={`/currency/${coin.id}`}>{ coin.name }</Link>
                     </td>
                     <td>{ coin.symbol }</td>
-                    <td>{ coin.market_cap_usd }</td>
-                    <td>{ coin.price_usd }</td>
+                    <td>${ coin.market_cap_usd }</td>
+                    <td>${ coin.price_usd }</td>
                     <td>{ coin.available_supply }</td>
-                    <td>{ coin['24h_volume_usd'] }</td>
-                    <td>{ coin.percent_change_1h }</td>
-                    <td>{ coin.percent_change_7d }</td>
-                    <td>{ coin.percent_change_24h }</td>
+                    <td>${ coin['24h_volume_usd'] }</td>
+                    <td>{ coin.percent_change_1h }%</td>
+                    <td>{ coin.percent_change_7d }%</td>
+                    <td>{ coin.percent_change_24h }%</td>
                 </tr>
             )
         })
