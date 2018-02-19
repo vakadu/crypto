@@ -25,6 +25,10 @@ class Crypto extends Component{
         clearInterval(this.setRefresh);
     }
 
+    formatValue (num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    }
+
     renderBody(){
         return _.map(this.props.coins, coin => {
             return (
@@ -34,10 +38,10 @@ class Crypto extends Component{
                         <Link to={`/currency/${coin.id}`}>{ coin.name }</Link>
                     </td>
                     <td>{ coin.symbol }</td>
-                    <td>${ coin.market_cap_usd }</td>
-                    <td>${ coin.price_usd }</td>
-                    <td>{ coin.available_supply }</td>
-                    <td>${ coin['24h_volume_usd'] }</td>
+                    <td>${ this.formatValue(parseInt(coin.market_cap_usd)) }</td>
+                    <td>${ this.formatValue(coin.price_usd) }</td>
+                    <td>{ this.formatValue(coin.available_supply) } BTC</td>
+                    <td>${ this.formatValue(parseInt(coin['24h_volume_usd'])) }</td>
                     <td>{ coin.percent_change_1h }%</td>
                     <td>{ coin.percent_change_7d }%</td>
                     <td>{ coin.percent_change_24h }%</td>
