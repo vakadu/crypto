@@ -30,7 +30,7 @@ class CryptoShow extends Component{
                         </div>
                         <div>
                             <h3>{ coin.name }<span>{ coin.price_usd}</span> <span>USD</span> <span>({ coin.percent_change_24h } %)</span> </h3>
-                            <Link to="/">Go Back</Link>
+                            <Link to="/" className="btn btn-primary back">Go Back</Link>
                         </div>
                         <div className="table-responsive">
                             <Table striped bordered condensed hover>
@@ -46,8 +46,8 @@ class CryptoShow extends Component{
                                 <tr>
                                     <td>${ this.formatValue(parseInt(coin.market_cap_usd)) } USD</td>
                                     <td>${ this.formatValue(parseInt(coin['24h_volume_usd'])) } USD</td>
-                                    <td> { this.formatValue(parseInt(coin.available_supply)) } BTC</td>
-                                    <td> { this.formatValue(parseInt(coin.max_supply)) } BTC</td>
+                                    <td>{ this.formatValue(parseInt(coin.available_supply)) }</td>
+                                    <td>{ this.formatValue(parseInt(coin.max_supply)) }</td>
                                 </tr>
                                 </tbody>
                             </Table>

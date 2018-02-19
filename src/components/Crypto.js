@@ -1,9 +1,8 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import ReactTimeout from 'react-timeout'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Grid, Row, Col, Table, ButtonToolbar, Button } from 'react-bootstrap';
+import { Grid, Row, Col, Table } from 'react-bootstrap';
 
 import { fetchCoins } from "../actions";
 
@@ -25,8 +24,8 @@ class Crypto extends Component{
         clearInterval(this.setRefresh);
     }
 
-    formatValue (num) {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    formatValue(intNum) {
+        return (intNum + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
     }
 
     renderBody(){
@@ -40,7 +39,7 @@ class Crypto extends Component{
                     <td>{ coin.symbol }</td>
                     <td>${ this.formatValue(parseInt(coin.market_cap_usd)) }</td>
                     <td>${ this.formatValue(coin.price_usd) }</td>
-                    <td>{ this.formatValue(coin.available_supply) } BTC</td>
+                    <td>{ this.formatValue(parseInt(coin.available_supply)) } BTC</td>
                     <td>${ this.formatValue(parseInt(coin['24h_volume_usd'])) }</td>
                     <td>{ coin.percent_change_1h }%</td>
                     <td>{ coin.percent_change_7d }%</td>
@@ -67,7 +66,7 @@ class Crypto extends Component{
                                     <th>Symbol</th>
                                     <th>Market Cap</th>
                                     <th>Price</th>
-                                    <th>Circulating Supply</th>
+                                    <th className="width-19">Circulating Supply</th>
                                     <th>Volume</th>
                                     <th>%1h</th>
                                     <th>%24h</th>
