@@ -1,6 +1,6 @@
 ### Getting Started
 
-Installation Steps of Node and NPM in Windows
+Installation Steps of Node and NPM in Windows.
 Click [here](https://nodejs.org/en/) for downloading node
 
 ```
@@ -12,8 +12,8 @@ Click [here](https://nodejs.org/en/) for downloading node
 
 Test it in Windows!
 ```
-> Test Node: To see if Node is installed, open the Windows Command Prompt, Powershell or a similar command line tool, and type node -v. This should print a version number, so you’ll see something like this v0.10.35.
-> Test NPM: To see if NPM is installed, type npm -v in Terminal. This should print NPM’s version number so you’ll see something like this 1.4.28
+> Test Node: To see if Node is installed, open the Windows Command Prompt, Powershell or a similar command line tool, and type node -v. This should print a version number, so you’ll see something like this v9.5.0.
+> Test NPM: To see if NPM is installed, type npm -v in Terminal. This should print NPM’s version number so you’ll see something like this 5.6.0
 ```
 
 Install Node.js on Ubuntu
@@ -45,4 +45,9 @@ Click [here](https://github.com/vakadu/crypto/archive/master.zip) then download 
 ```
 > npm install
 > npm start
+```
+After loading the project in terminal, go to browser and type:
+
+```
+> localhost: 8080
 ```
