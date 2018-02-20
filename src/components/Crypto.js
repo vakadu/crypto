@@ -12,7 +12,7 @@ class Crypto extends Component{
 
         this.setRefresh = setInterval(() => {
             this.props.fetchCoins();
-            console.log("hello");
+            console.log("page refreshed");
         }, 300000);//10000
     }
 
@@ -39,7 +39,7 @@ class Crypto extends Component{
                     <td>{ coin.symbol }</td>
                     <td>${ this.formatValue(parseInt(coin.market_cap_usd)) }</td>
                     <td>${ this.formatValue(coin.price_usd) }</td>
-                    <td>{ this.formatValue(parseInt(coin.available_supply)) } BTC</td>
+                    <td>{ this.formatValue(parseInt(coin.available_supply)) }</td>
                     <td>${ this.formatValue(parseInt(coin['24h_volume_usd'])) }</td>
                     <td>{ coin.percent_change_1h }%</td>
                     <td>{ coin.percent_change_7d }%</td>

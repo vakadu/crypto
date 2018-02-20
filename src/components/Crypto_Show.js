@@ -46,8 +46,8 @@ class CryptoShow extends Component{
                                 <tr>
                                     <td>${ this.formatValue(parseInt(coin.market_cap_usd)) } USD</td>
                                     <td>${ this.formatValue(parseInt(coin['24h_volume_usd'])) } USD</td>
-                                    <td>{ this.formatValue(parseInt(coin.available_supply)) }</td>
-                                    <td>{ this.formatValue(parseInt(coin.max_supply)) }</td>
+                                    <td>{ this.formatValue(parseInt(coin.available_supply)) } { coin.symbol }</td>
+                                    <td>{ this.formatValue(parseInt(coin.max_supply)) } { coin.symbol }</td>
                                 </tr>
                                 </tbody>
                             </Table>

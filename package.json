@@ -20,7 +20,6 @@
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
     "css-loader": "^0.28.9",
-    "jquery": "^2.2.4",
     "jsdom": "^8.1.0",
     "less": "^3.0.1",
     "less-loader": "^4.0.5",
