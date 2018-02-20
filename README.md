@@ -18,13 +18,13 @@ Test it in Windows!
 
 Install Node.js on Ubuntu
 ```
-> $ sudo apt-get update
-> $ sudo apt-get install nodejs
-> $ sudo apt-get install npm
+> sudo apt-get update
+> sudo apt-get install nodejs
+> sudo apt-get install npm
 > To check which version of Node.js you have installed after these initial steps, type:
-> $ node -v
+> node -v
 > To check which version of NPM you have installed after these initial steps, type:
-> $ npm -v
+> npm -v
 ```
 
 There are two methods for getting started with this repo.
